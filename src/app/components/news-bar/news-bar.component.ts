@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-news-bar',
@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './news-bar.component.html',
   styleUrl: './news-bar.component.css'
 })
-export class NewsBarComponent {
+export class NewsBarComponent implements OnInit {
 
+  @Input()
+  newsBarPhoto:string = "";
+  @Input()
+  newsBarTitle:string = "";
+  @Input()
+  newsBarDescription:string = "";
+
+  constructor() { }
+
+  ngOnInit(): void {}
 }
